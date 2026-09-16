@@ -1,18 +1,20 @@
 #include <Arduino.h>
+#include <avr/interrupt.h>
 
-// put function declarations here:
-int myFunction(int, int);
-
-void setup() {
-  // put your setup code here, to run once:
-  int result = myFunction(2, 3);
+ISR(INT0_vect) {
+  PORTB ^= (1 << PB0);
 }
 
-void loop() {
-  // put your main code here, to run repeatedly:
-}
+int main(void){
+  DDRB |= (1 << PB0);
 
-// put function definitions here:
-int myFunction(int x, int y) {
-  return x + y;
+  PORTD |= (1 << PD2);
+  MCUCR |= (1 << ISC01);
+  MCUCR &= ~(1 << ISC00);
+  
+  GICR |= (1 << INT0);
+  sei();
+
+  while (1) {
+  }
 }
