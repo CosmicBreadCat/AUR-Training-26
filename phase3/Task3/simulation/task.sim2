@@ -1,0 +1,13 @@
+<circuit version="2.0.0-" rev="260501" stepSize="1000000" stepsPS="1000000" NLsteps="100000" reaStep="1000000" animate="0" anicurr="0" ansi="0" width="3200" height="2400" >
+
+<item itemtype="Subcircuit" CircId="Nano-1" mainComp="false" Show_id="true" Show_Val="false" Pos="-180,-116" rotation="0" hflip="1" vflip="1" label="Nano-1" idLabPos="0,-20" labelrot="0" valLabPos="-16,20" valLabRot="0">
+<mainCompProps MainCompId="m328 TQFP-269" Frequency="16 MHz" ForceFreq="true" savePGM="false" Program="../.pio/build/nanoatmega328/firmware.hex" Auto_Load="true" saveEepr="true" MainMcu="true" SerialMon="-1" />
+</item>
+
+<item itemtype="SerialTerm" CircId="SerialTerm-2" mainComp="false" Show_id="false" Show_Val="false" Pos="-148,-172" rotation="0" hflip="1" vflip="1" label="SerialTerm-2" idLabPos="-20,-32" labelrot="0" valLabPos="-16,20" valLabRot="0" Baudrate="9600 _Bd" DataBits="8 _bits" StopBits="1 _bits" SerialMon="false" />
+
+<item itemtype="Connector" uid="Connector-1" startpinid="Nano-1-1" endpinid="SerialTerm-2-pin1" pointList="-172,-100,-188,-100,-188,-164,-172,-164" />
+
+<item itemtype="Connector" uid="Connector-2" startpinid="Nano-1-0" endpinid="SerialTerm-2-pin0" pointList="-172,-92,-196,-92,-196,-180,-172,-180" />
+
+</circuit>
